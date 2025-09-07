@@ -1,0 +1,89 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Notation}{3}{section.2}%
+\contentsline {section}{\numberline {3}Cryptographic primitives}{5}{section.3}%
+\contentsline {section}{\numberline {4}Addresses}{9}{section.4}%
+\contentsline {section}{\numberline {5}Protocol Parameters}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Updatable Protocol Parameters}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Global Constants}{11}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Transactions}{15}{section.6}%
+\contentsline {section}{\numberline {7}Update Proposal Mechanism}{18}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Protocol Parameter Update Proposals}{18}{subsection.7.1}%
+\contentsline {section}{\numberline {8}UTxO}{21}{section.8}%
+\contentsline {subsection}{\numberline {8.1}UTxO Transitions}{21}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Deposits and Refunds}{26}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Witnesses}{27}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Delegation}{30}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Delegation Definitions}{30}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Delegation Transitions}{33}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Delegation Rules}{35}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Stake Pool Rules}{39}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Delegation and Pool Combined Rules}{41}{subsection.9.5}%
+\contentsline {section}{\numberline {10}Ledger State Transition}{44}{section.10}%
+\contentsline {section}{\numberline {11}Rewards and the Epoch Boundary}{47}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Overview of the Reward Calculation}{47}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Example Illustration of the Reward Cycle}{48}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Helper Functions and Accounting Fields}{48}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Stake Distribution Calculation}{49}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Snapshot Transition}{51}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Pool Reaping Transition}{53}{subsection.11.6}%
+\contentsline {subsection}{\numberline {11.7}Protocol Parameters Update Transition}{55}{subsection.11.7}%
+\contentsline {subsection}{\numberline {11.8}Complete Epoch Boundary Transition}{58}{subsection.11.8}%
+\contentsline {subsection}{\numberline {11.9}Rewards Distribution Calculation}{60}{subsection.11.9}%
+\contentsline {subsection}{\numberline {11.10}Reward Update Calculation}{64}{subsection.11.10}%
+\contentsline {section}{\numberline {12}Blockchain layer}{68}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Block Definitions}{68}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}MIR Transition}{70}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}New Epoch Transition}{70}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Tick Nonce Transition}{73}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Update Nonce Transition}{73}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Reward Update Transition}{74}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Chain Tick Transition}{75}{subsection.12.7}%
+\contentsline {subsection}{\numberline {12.8}Operational Certificate Transition}{77}{subsection.12.8}%
+\contentsline {subsection}{\numberline {12.9}Verifiable Random Function}{78}{subsection.12.9}%
+\contentsline {subsection}{\numberline {12.10}Overlay Schedule}{80}{subsection.12.10}%
+\contentsline {subsection}{\numberline {12.11}Protocol Transition}{84}{subsection.12.11}%
+\contentsline {subsection}{\numberline {12.12}Block Body Transition}{86}{subsection.12.12}%
+\contentsline {subsection}{\numberline {12.13}Chain Transition}{88}{subsection.12.13}%
+\contentsline {subsection}{\numberline {12.14}Byron to Shelley Transition}{92}{subsection.12.14}%
+\contentsline {section}{\numberline {13}Software Updates}{95}{section.13}%
+\contentsline {section}{\numberline {14}Transition Rule Dependencies}{96}{section.14}%
+\contentsline {section}{\numberline {15}Properties}{98}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Header-Only Validation}{98}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}Validity of a Ledger State}{100}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}Ledger Properties}{101}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4}Ledger State Properties for Delegation Transitions}{103}{subsection.15.4}%
+\contentsline {subsection}{\numberline {15.5}Ledger State Properties for Staking Pool Transitions}{104}{subsection.15.5}%
+\contentsline {subsection}{\numberline {15.6}Properties of Numerical Calculations}{105}{subsection.15.6}%
+\contentsline {subsection}{\numberline {15.7}Preservation of Value}{106}{subsection.15.7}%
+\contentsline {subsection}{\numberline {15.8}Non-negative Deposit Pot}{109}{subsection.15.8}%
+\contentsline {section}{\numberline {16}Leader Value Calculation}{113}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Computing the leader value}{113}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Node eligibility}{113}{subsection.16.2}%
+\contentsline {section}{\numberline {17}Errata}{114}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Total stake calculation}{114}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Active stake registrations and the Reward Calculation}{114}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.3}Stability Windows}{114}{subsection.17.3}%
+\contentsline {subsection}{\numberline {17.4}Reward aggregation}{114}{subsection.17.4}%
+\contentsline {subsection}{\numberline {17.5}Byron redeem addresses}{115}{subsection.17.5}%
+\contentsline {subsection}{\numberline {17.6}Block hash used in the epoch nonce}{115}{subsection.17.6}%
+\contentsline {subsection}{\numberline {17.7}Deposit tracking}{115}{subsection.17.7}%
+\contentsline {section}{References}{116}{subsection.17.7}%
+\contentsline {section}{\numberline {A}Cryptographic Details}{116}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Warning About Re-serialization}{116}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Hashing}{116}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Addresses}{116}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}KES}{116}{subsection.A.4}%
+\contentsline {subsection}{\numberline {A.5}VRF}{116}{subsection.A.5}%
+\contentsline {subsection}{\numberline {A.6}Abstract functions}{117}{subsection.A.6}%
+\contentsline {subsection}{\numberline {A.7}Multi-Signatures}{117}{subsection.A.7}%
+\contentsline {section}{\numberline {B}Binary Address Format}{118}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Header, first nibble}{118}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Header, second nibble}{118}{subsection.B.2}%
+\contentsline {subsection}{\numberline {B.3}Header, examples}{118}{subsection.B.3}%
+\contentsline {subsection}{\numberline {B.4}Payloads}{119}{subsection.B.4}%
+\contentsline {section}{\numberline {C}Bootstrap Witnesses}{119}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}Bootstrap Witnesses CBOR Specification}{119}{subsection.C.1}%
+\contentsline {subsection}{\numberline {C.2}Bootstrap Address ID Recovery}{119}{subsection.C.2}%
+\contentsline {section}{\numberline {D}CBOR Serialization Specification}{120}{appendix.D}%
+\contentsline {section}{\numberline {E}Implementation of \ensuremath {\mathsf {txSize}}}{120}{appendix.E}%
+\contentsline {section}{\numberline {F}Proofs}{120}{appendix.F}%

@@ -1,0 +1,83 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Non-standard map operators}}{4}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Cryptographic definitions}}{5}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces KES Cryptographic definitions}}{6}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Multi-signature via Native Scripts}}{7}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces VRF definitions}}{8}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Definitions used in Addresses}}{10}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Definitions Used in Protocol Parameters}}{13}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Global Constants}}{14}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Helper functions for the Protocol Parameters}}{14}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Definitions used in the UTxO transition system}}{16}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Helper Functions for Transaction Inputs}}{17}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Protocol Parameter Update Transition System Types}}{19}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Protocol Parameter Update Inference Rules}}{20}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Functions used in UTxO rules}}{22}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces UTxO transition-system types}}{23}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces UTxO inference rules}}{25}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Functions used in Deposits - Refunds}}{26}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Functions used in witness rule}}{28}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces UTxO with witness transition-system types}}{29}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces UTxO with witnesses inference rules}}{29}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Delegation Definitions}}{32}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Delegation Transitions}}{34}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Delegation Inference Rules}}{37}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Move Instantaneous Rewards Inference Rule}}{38}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Pool Inference Rule}}{40}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Delegation and Pool Combined Transition Type}}{41}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Delegation and Pool Combined Transition Rules}}{42}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Delegation sequence transition type}}{42}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Delegation sequence rules}}{43}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Ledger transition-system types}}{44}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Ledger inference rule}}{45}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Ledger Sequence transition-system types}}{46}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Ledger sequence rules}}{46}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Helper Functions used in Rewards and Epoch Boundary}}{49}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Accounting fields}}{49}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Epoch definitions}}{49}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Stake Distribution Function}}{50}{figure.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Snapshot transition-system types}}{51}{figure.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Snapshot Inference Rule}}{52}{figure.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Pool Reap Transition}}{53}{figure.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Pool Reap Inference Rule}}{54}{figure.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces New Proto Param transition-system types}}{55}{figure.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces New Proto Param Inference Rule}}{57}{figure.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Epoch transition-system types}}{58}{figure.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Epoch Inference Rule}}{59}{figure.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Functions used in the Reward Calculation}}{60}{figure.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Functions used in the Reward Splitting}}{61}{figure.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces The Reward Calculation}}{63}{figure.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Preservation of Value}}{64}{figure.49}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Rewards Update type}}{64}{figure.50}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Reward Update Creation}}{66}{figure.51}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Reward Update Application}}{67}{figure.52}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Block Definitions}}{69}{figure.53}%
+\contentsline {figure}{\numberline {54}{\ignorespaces MIR transition-system types}}{70}{figure.54}%
+\contentsline {figure}{\numberline {55}{\ignorespaces MIR rules}}{70}{figure.55}%
+\contentsline {figure}{\numberline {56}{\ignorespaces NewEpoch transition-system types}}{71}{figure.56}%
+\contentsline {figure}{\numberline {57}{\ignorespaces New Epoch rules}}{72}{figure.57}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Tick Nonce rules}}{73}{figure.58}%
+\contentsline {figure}{\numberline {59}{\ignorespaces UpdNonce transition-system types}}{74}{figure.59}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Update Nonce rules}}{74}{figure.60}%
+\contentsline {figure}{\numberline {61}{\ignorespaces Reward Update transition-system types}}{74}{figure.61}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Reward Update rules}}{75}{figure.62}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Tick transition-system types}}{76}{figure.63}%
+\contentsline {figure}{\numberline {64}{\ignorespaces Tick rules}}{76}{figure.64}%
+\contentsline {figure}{\numberline {65}{\ignorespaces OCert transition-system types}}{77}{figure.65}%
+\contentsline {figure}{\numberline {66}{\ignorespaces OCert rules}}{78}{figure.66}%
+\contentsline {figure}{\numberline {67}{\ignorespaces Overlay transition-system types}}{81}{figure.67}%
+\contentsline {figure}{\numberline {68}{\ignorespaces Overlay rules}}{82}{figure.68}%
+\contentsline {figure}{\numberline {69}{\ignorespaces Protocol transition-system types}}{84}{figure.69}%
+\contentsline {figure}{\numberline {70}{\ignorespaces Protocol rules}}{85}{figure.70}%
+\contentsline {figure}{\numberline {71}{\ignorespaces BBody transition-system types}}{86}{figure.71}%
+\contentsline {figure}{\numberline {72}{\ignorespaces BBody rules}}{87}{figure.72}%
+\contentsline {figure}{\numberline {73}{\ignorespaces Chain transition-system types}}{89}{figure.73}%
+\contentsline {figure}{\numberline {74}{\ignorespaces Helper Functions used in the CHAIN transition}}{90}{figure.74}%
+\contentsline {figure}{\numberline {75}{\ignorespaces Chain rules}}{91}{figure.75}%
+\contentsline {figure}{\numberline {76}{\ignorespaces Initial Shelley States}}{93}{figure.76}%
+\contentsline {figure}{\numberline {77}{\ignorespaces Byron to Shelley State Transtition}}{94}{figure.77}%
+\contentsline {figure}{\numberline {78}{\ignorespaces STS Rules, Sub-Rules and Dependencies}}{97}{figure.78}%
+\contentsline {figure}{\numberline {79}{\ignorespaces Tick Forecast rules}}{98}{figure.79}%
+\contentsline {figure}{\numberline {80}{\ignorespaces Chain-Head rules}}{99}{figure.80}%
+\contentsline {figure}{\numberline {81}{\ignorespaces Definitions and Functions for Valid Ledger State}}{101}{figure.81}%
+\contentsline {figure}{\numberline {82}{\ignorespaces Definitions and Functions for Stake Delegation in Ledger States}}{103}{figure.82}%
+\contentsline {figure}{\numberline {83}{\ignorespaces Initial Chain State}}{109}{figure.83}%
