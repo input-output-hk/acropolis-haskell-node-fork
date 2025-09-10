@@ -279,3 +279,23 @@ startStep epochNo slotsPerEpoch b@(BlocksMade b') es'@(EpochState acnt ls' ss nm
 
 It could be *guessed* that a previous parameter set for current epoch is used (that is: parameter set for epoch 213 
 with current epoch 214): since they use prevPParamsEpochStateL method
+
+Transition of era parameters
+----------------------------
+
+Transition.hs:
+'Previous parameters' for first epoch of era *seem* to be determined using this:
+
+```
+  -- | Lens for the `ShelleyGenesis` from the `TransitionConfig`. Default implementation
+  -- looks in the previous era's config
+  tcShelleyGenesisL :: Lens' (TransitionConfig era) ShelleyGenesis
+  default tcShelleyGenesisL ::
+    EraTransition (PreviousEra era) =>
+    Lens' (TransitionConfig era) ShelleyGenesis
+  tcShelleyGenesisL = tcPreviousEraConfigL . tcShelleyGenesisL
+```
+
+They have functions, that generate new config, based on the previous one and genesis (edited) 
+There are other functions, which construct new parameters starting from genesis, but they're
+marked as 'testing only'.
