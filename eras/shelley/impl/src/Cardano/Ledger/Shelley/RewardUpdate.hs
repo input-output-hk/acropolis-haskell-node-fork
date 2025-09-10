@@ -303,7 +303,9 @@ instance Pulsable RewardPulser where
     if VMap.null balance
       then pure p
       else do
+        -- takes n elements of balance (keys-vectors)
         let !(steps, !balance') = VMap.splitAt n balance
+                        --- foldlWithKey: function (accum, key, vector) -> accum; accum; keys-vectors
             ans' = VMap.foldlWithKey (rewardStakePoolMember free) ans steps
         pure $! RSLP n free balance' ans'
   completeM (RSLP _ free balance (clearRecent -> ans)) =
