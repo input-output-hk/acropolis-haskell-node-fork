@@ -299,3 +299,29 @@ Transition.hs:
 They have functions, that generate new config, based on the previous one and genesis (edited) 
 There are other functions, which construct new parameters starting from genesis, but they're
 marked as 'testing only'.
+
+Aggregate rewards (early Shelley vs bugfixed Shelley)
+-----------------------------------------------------
+
+In case of the first Shelley protocol version, they pay only one reward to credentail,
+which owns several pools. The rewarded account is that with minimal account hash credential.
+
+```
+-- | Filter the reward payments to those that will actually be delivered. This
+-- function exists since in Shelley, a stake credential earning rewards from
+-- multiple sources would only receive one reward. So some of the coins are ignored,
+-- because of this backward compatibility issue in early protocolVersions. Note that
+-- both of the domains of the returned maps are a subset of the the domain of the input map 'rewards'
+filterRewards ::
+  ProtVer ->
+  Map (Credential 'Staking) (Set Reward) ->
+  ( Map (Credential 'Staking) (Set Reward) -- delivered
+  , Map (Credential 'Staking) (Set Reward) -- ignored in Shelley Era
+  )
+filterRewards pv rewards =
+  if HardForks.aggregatedRewards pv
+    then (rewards, Map.empty)
+    else
+      let mp = Map.map Set.deleteFindMin rewards
+       in (Map.map (Set.singleton . fst) mp, Map.filter (not . Set.null) $ Map.map snd mp)
+```
