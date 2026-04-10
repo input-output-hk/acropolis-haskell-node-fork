@@ -42,7 +42,7 @@ import Cardano.Ledger.Shelley.Governance (EraGov)
 import Cardano.Ledger.Shelley.LedgerState (
   PulsingRewUpdate (..),
   EpochState (..),
-  asReserves,
+  --asReserves,
   completeStep,
   pulseStep,
   startStep,
@@ -74,7 +74,7 @@ import qualified Data.Map.Strict as Map
 import Data.Set (Set)
 import GHC.Generics (Generic)
 import NoThunks.Class (NoThunks (..))
-import Debug.Trace
+--import Debug.Trace
 
 data RupdEnv era
   = RupdEnv BlocksMade (EpochState era) Integer
@@ -132,13 +132,13 @@ rupdTransition = do
     ei <- asks epochInfoPure
     sr <- asks randomnessStabilisationWindow
     let e = epochInfoEpoch ei s
-        EpochState acnt _ _ _ = es
+        --EpochState acnt _ _ _ = es
         slotsPerEpoch = epochInfoSize ei e
         slot = epochInfoFirst ei e +* Duration sr
     maxLL <- asks maxLovelaceSupply
     asc <- asks activeSlotCoeff
     k <- asks securityParameter -- Maximum number of blocks we are allowed to roll back
-    return $ trace ("**** Transition: slot=" ++ show s ++ ", epoch=" ++ show e ++ ", asc=" ++ show asc ++ ", reserves=" ++ show (asReserves acnt)) $ 
+    return $ --trace ("**** Transition: slot=" ++ show s ++ ", epoch=" ++ show e ++ ", asc=" ++ show asc ++ ", reserves=" ++ show (asReserves acnt)) $ 
                    (slotsPerEpoch, slot, slot +* Duration sr, maxLL, asc, k, e)
   let maxsupply = Coin (fromIntegral maxLL)
   case determineRewardTiming s slot slotForce of

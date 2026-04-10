@@ -172,21 +172,24 @@ startStep epochNo slotsPerEpoch b@(BlocksMade b') es'@(EpochState acnt ls' ss nm
           activeStake
       -- We map over the registered stake pools to compute the relevant
       -- stake pool specific values.
-      allPoolInfo = trace ("**** startStep params:"
+--      allPoolInfo = trace ("**** startStep params:"
+--          ++ " epoch=" ++ show epochNo
+--          ++ ", slotsPerEpoch=" ++ show slotsPerEpoch
+--          ++ ", b=" ++ show b
+--          ++ ", accountState=" ++ show acnt
+--          ++ ", ds=" ++ show ds
+--          ++ ", pr=" ++ show pr
+--          ++ ", ss=" ++ show ss
+--          ++ ", nm=" ++ show nm
+--          ++ ", totalStake=" ++ show totalStake
+--          ++ ", maxSupply=" ++ show maxSupply
+--          ++ ", asc=" ++ show asc
+--          ++ ", secparam=" ++ show secparam ++ " ****") $ 
+      EpochNo epoch = epochNo
+      allPoolInfo = trace ("**** startStep computation:"
           ++ " epoch=" ++ show epochNo
-          ++ ", slotsPerEpoch=" ++ show slotsPerEpoch
-          ++ ", b=" ++ show b
-          ++ ", accountState=" ++ show acnt
-          ++ ", ds=" ++ show ds
-          ++ ", pr=" ++ show pr
-          ++ ", ss=" ++ show ss
-          ++ ", nm=" ++ show nm
-          ++ ", totalStake=" ++ show totalStake
-          ++ ", maxSupply=" ++ show maxSupply
-          ++ ", asc=" ++ show asc
-          ++ ", secparam=" ++ show secparam ++ " ****") $ trace ("**** startStep computation:"
-          ++ " epoch=" ++ show epochNo
-          ++ ", stake=" ++ show stake
+          ++ ", stake=" ++ (if epoch >= 490 || epoch `mod` 5 == 0 then show stake else "[]")
+          ++ ", stakePerPool=" ++ show stakePerPool
           ++ ", blocksMade=" ++ show blocksMade
           ++ ", k=" ++ show k
           ++ ", reserves=" ++ show reserves
@@ -198,8 +201,7 @@ startStep epochNo slotsPerEpoch b@(BlocksMade b') es'@(EpochState acnt ls' ss nm
           ++ ", rPot=" ++ show rPot
           ++ ", deltaT1=" ++ show deltaT1
           ++ ", _R=" ++ show _R
-          ++ ", activeStake=" ++ show activeStake
-          ++ ", stakePerPool=" ++ show stakePerPool) $ VMap.map mkPoolRewardInfoCurry poolParams
+          ++ ", activeStake=" ++ show activeStake) $ VMap.map mkPoolRewardInfoCurry poolParams
 
       -- Stake pools that do not produce any blocks get no rewards,
       -- but some information is still needed from non-block-producing
@@ -262,9 +264,7 @@ startStep epochNo slotsPerEpoch b@(BlocksMade b') es'@(EpochState acnt ls' ss nm
           free
           (unStake stake)
           (RewardAns Map.empty Map.empty)
-   in trace ("**** startStep pulser"
-      ++ ": free=" ++ show free
-   ) $ Pulsing rewsnap pulser
+   in Pulsing rewsnap pulser
 
 -- Phase 2
 

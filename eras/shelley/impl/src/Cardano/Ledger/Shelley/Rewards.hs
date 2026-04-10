@@ -29,16 +29,16 @@ where
 import Cardano.Ledger.BaseTypes (
   BlocksMade (..),
   BoundedRational (..),
-  NonNegativeInterval,
-  NonZero,
+--  NonNegativeInterval,
+--  NonZero,
   ProtVer,
   UnitInterval,
   nonZeroOr,
-  unNonZero,
-  recipNonZero,
-  toIntegerNonZero,
-  toRatioNonZero,
-  (/.),
+--  unNonZero,
+--  recipNonZero,
+--  toIntegerNonZero,
+--  toRatioNonZero,
+--  (/.),
   (%?),
  )
 import Cardano.Ledger.Binary (
@@ -68,7 +68,7 @@ import Data.Map.Strict (Map)
 import qualified Data.Map.Strict as Map
 import Data.Ratio ((%))
 import Data.Set (Set)
-import Data.Word (Word16)
+--import Data.Word (Word16)
 import qualified Data.Set as Set
 import qualified Data.VMap as VMap
 import GHC.Generics (Generic)
@@ -77,7 +77,7 @@ import NoThunks.Class (NoThunks (..))
 import Numeric.Natural (Natural)
 import Quiet
 
-import Debug.Trace
+--import Debug.Trace
 
 -- | StakeShare type
 newtype StakeShare = StakeShare {unStakeShare :: Rational}
@@ -294,18 +294,19 @@ rewardOnePoolMember
   hk
   (Coin c) =
     let result = if prefilter && notPoolOwner (poolPs rewardInfo) hk && r /= Coin 0 then Just r else Nothing
-    in trace ("**** Calculating reward for " ++ show rewardInfo 
-          ++ ": totalStake=" ++ show totalStake
-          ++ ", hk=" ++ show hk
-          ++ ", c=" ++ show c
-          ++ ", prefilter=" ++ show prefilter
-          ++ ", notPoolOwner=" ++ show (notPoolOwner (poolPs rewardInfo) hk)
-          ++ ", hkMemberAddrsRew=" ++ show (hk `Set.member` addrsRew)
-          ++ ", sigma=" ++ show sigma 
-          ++ ", poolR=" ++ show poolR 
-          ++ ", stakeShare=" ++ show stakeShare 
-          ++ ", R=" ++ show r
-          ++ ", finally=" ++ show result ++ " ****") $ result
+    in --trace ("**** Calculating reward for " ++ show rewardInfo 
+       --  ++ ": totalStake=" ++ show totalStake
+       --  ++ ", hk=" ++ show hk
+       --  ++ ", c=" ++ show c
+       --  ++ ", prefilter=" ++ show prefilter
+       --  ++ ", notPoolOwner=" ++ show (notPoolOwner (poolPs rewardInfo) hk)
+       --  ++ ", hkMemberAddrsRew=" ++ show (hk `Set.member` addrsRew)
+       --  ++ ", sigma=" ++ show sigma 
+       --  ++ ", poolR=" ++ show poolR 
+       --  ++ ", stakeShare=" ++ show stakeShare 
+       --  ++ ", R=" ++ show r
+       --  ++ ", finally=" ++ show result ++ " ****") $ 
+       result
     where
       prefilter = HardForks.forgoRewardPrefilter pp || hk `Set.member` addrsRew
       pool = poolPs rewardInfo
@@ -316,42 +317,42 @@ rewardOnePoolMember
         StakeShare $ c % unCoin totalStake
       r = memberRew poolR pool stakeShare sigma
 
-duplicate_maxPool' ::
-  PoolParams ->
-  NonNegativeInterval ->
-  NonZero Word16 ->
-  Coin ->
-  Rational ->
-  Rational ->
-  Coin
-duplicate_maxPool' pool a0 nOpt r sigma pR = 
-    trace ("**** maxPool': "
-            ++ "pool=" ++ show pool
-            ++ ", a0=" ++ show a0
-            ++ ", nOpt=" ++ show nOpt
-            ++ ", r=" ++ show r
-            ++ ", sigma=" ++ show sigma
-            ++ ", pR=" ++ show pR
-            ++ ", nonZeroZ0=" ++ show nonZeroZ0
-            ++ ", z0=" ++ show z0
-            ++ ", sigma'=" ++ show sigma'
-            ++ ", factor1=" ++ show factor1
-            ++ ", factor2=" ++ show factor2
-            ++ ", factor3=" ++ show factor3
-            ++ ", factor4=" ++ show factor4
-    ) $ rationalToCoinViaFloor $ factor1 * factor2
-  where
-    nonZeroZ0 = recipNonZero . toRatioNonZero $ toIntegerNonZero nOpt
-    z0 = unNonZero nonZeroZ0
-    sigma' = min sigma z0
-    p' = min pR z0
-    factor1 =
+--duplicate_maxPool' ::
+--  PoolParams ->
+--  NonNegativeInterval ->
+--  NonZero Word16 ->
+--  Coin ->
+--  Rational ->
+--  Rational ->
+--  Coin
+--duplicate_maxPool' pool a0 nOpt r sigma pR = 
+--    trace ("**** maxPool': "
+--            ++ "pool=" ++ show pool
+--            ++ ", a0=" ++ show a0
+--            ++ ", nOpt=" ++ show nOpt
+--            ++ ", r=" ++ show r
+--            ++ ", sigma=" ++ show sigma
+--            ++ ", pR=" ++ show pR
+--            ++ ", nonZeroZ0=" ++ show nonZeroZ0
+--            ++ ", z0=" ++ show z0
+--            ++ ", sigma'=" ++ show sigma'
+--            ++ ", factor1=" ++ show factor1
+--            ++ ", factor2=" ++ show factor2
+--            ++ ", factor3=" ++ show factor3
+--            ++ ", factor4=" ++ show factor4
+--    ) $ rationalToCoinViaFloor $ factor1 * factor2
+--  where
+--    nonZeroZ0 = recipNonZero . toRatioNonZero $ toIntegerNonZero nOpt
+--    z0 = unNonZero nonZeroZ0
+--    sigma' = min sigma z0
+--    p' = min pR z0
+--    factor1 =
       -- This division is safe, because a0 is non-negative and we're adding one
       -- to it
-      coinToRational r / (1 + unboundRational a0)
-    factor2 = sigma' + p' * unboundRational a0 * factor3
-    factor3 = (sigma' - p' * factor4) /. nonZeroZ0
-    factor4 = (z0 - sigma') /. nonZeroZ0
+--      coinToRational r / (1 + unboundRational a0)
+--    factor2 = sigma' + p' * unboundRational a0 * factor3
+--    factor3 = (sigma' - p' * factor4) /. nonZeroZ0
+--    factor4 = (z0 - sigma') /. nonZeroZ0
 
 
 -- | Calculate single stake pool specific values for the reward computation.
@@ -377,7 +378,7 @@ mkPoolRewardInfo ::
   PoolParams ->
   Either StakeShare PoolRewardInfo
 mkPoolRewardInfo
-  epoch
+  _epoch
   pp
   r
   blocks
@@ -403,10 +404,11 @@ mkPoolRewardInfo
             if pledge <= ostake
               then 
                  let maxpool' = maxPool' pp_a0 pp_nOpt r sigma pledgeRelative
-                     dmaxpool' = duplicate_maxPool' pool pp_a0 pp_nOpt r sigma pledgeRelative
-                 in if maxpool' /= dmaxpool' 
-                     then trace ("**** maxPool' /= d_maxPool': " ++ show maxpool' ++ "/=" ++ show dmaxpool' ++ " ****") maxpool'
-                     else maxpool'
+                 in maxpool'
+                 --    dmaxpool' = duplicate_maxPool' pool pp_a0 pp_nOpt r sigma pledgeRelative
+                 --in if maxpool' /= dmaxpool' 
+                 --    then trace ("**** maxPool' /= d_maxPool': " ++ show maxpool' ++ "/=" ++ show dmaxpool' ++ " ****") maxpool'
+                 --    else maxpool'
               else mempty
           appPerf = mkApparentPerformance pp_d sigmaA blocksN blocksTotal
           poolR = rationalToCoinViaFloor (appPerf * fromIntegral maxP)
@@ -425,24 +427,24 @@ mkPoolRewardInfo
               , poolLeaderReward = LeaderOnlyReward (ppId pool) lreward
               }
        in 
-         trace ("**** Calculating PoolRewardInfo: epoch=" ++ show epoch
-            ++ ", blocksN=" ++ show blocksN
-            ++ ", blocksTotal=" ++ show blocksTotal
-            ++ ", pp_a0=" ++ show pp_a0
-            ++ ", pp_nOpt=" ++ show pp_nOpt
-            ++ ", sigma=" ++ show sigma
-            ++ ", rewardInfo=" ++ show rewardInfo 
-            ++ ", plege=" ++ show pledge
-            ++ ", activeStake=" ++ show activeStake
-            ++ ", pstakeTot=" ++ show pstakeTot
-            ++ ", totalStake=" ++ show totalStake
-            ++ ", ostake=" ++ show ostake
-            ++ ", pledgeRelative=" ++ show pledgeRelative
-            ++ ", sigmaA=" ++ show sigmaA
-            ++ ", maxP=" ++ show maxP
-            ++ ", appPerf=" ++ show appPerf
-            ++ ", R=" ++ show r
-            ++ ", rewardInfo=" ++ show rewardInfo ++ " ****") $
+         --trace ("**** Calculating PoolRewardInfo: epoch=" ++ show epoch
+         --    ++ ", blocksN=" ++ show blocksN
+         --    ++ ", blocksTotal=" ++ show blocksTotal
+         --    ++ ", pp_a0=" ++ show pp_a0
+         --    ++ ", pp_nOpt=" ++ show pp_nOpt
+         --    ++ ", sigma=" ++ show sigma
+         --    ++ ", rewardInfo=" ++ show rewardInfo 
+         --    ++ ", plege=" ++ show pledge
+         --    ++ ", activeStake=" ++ show activeStake
+         --    ++ ", pstakeTot=" ++ show pstakeTot
+         --    ++ ", totalStake=" ++ show totalStake
+         --    ++ ", ostake=" ++ show ostake
+         --    ++ ", pledgeRelative=" ++ show pledgeRelative
+         --    ++ ", sigmaA=" ++ show sigmaA
+         --    ++ ", maxP=" ++ show maxP
+         --    ++ ", appPerf=" ++ show appPerf
+         --    ++ ", R=" ++ show r
+         --    ++ ", rewardInfo=" ++ show rewardInfo ++ " ****") $
          Right $! rewardInfo
     where
       pp_d = pp ^. ppDG
